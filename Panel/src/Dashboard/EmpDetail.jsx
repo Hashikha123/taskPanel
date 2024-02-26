@@ -41,7 +41,7 @@ const records=[
         id:3,
         name:'Nikita',
         email:'nikkirana@gmail.com',
-        age:'78',
+        age:'20',
         phone:'57669798',
         position:'FrontEnd',
         

@@ -5,7 +5,7 @@ import {AiFillAlipaySquare, AiOutlineClose, AiFillDatabase, AiFillHome, AiFillPi
 import { FaArrowLeft } from "react-icons/fa";
 
 
-function AdminDash() {
+function EmpDash() {
     const[open,setOpen]=useState(false);
 
 const toggleSidebar=()=>{
@@ -15,12 +15,10 @@ const closeSidebar = () => {
     setOpen(false);
   };
 const menuItems = [
-    { id: 1, title: "Home", path:"/admin" },
-    { id: 2, title: "Employees", path: "/admin/employee" },
-    { id: 3, title: "Department", path: "/admin/dep" },
-    { id: 4, title: "Designation", path: "/admin/des" },
-    { id: 5, title: "Tasks", path: "/admin/task" },
-    { id: 6, title: "Reports", path: "/" }
+    { id: 1, title: "Home", path:"/dash" },
+    { id: 2, title: "Profile", path: "/dash/profile" },
+    { id: 3, title: "Tasks", path: "/dash/task" }
+   
 
 ];
 
@@ -164,4 +162,4 @@ const handleBack=()=>{
   )
 }
 
-export default AdminDash
+export default EmpDash
