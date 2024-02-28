@@ -1,9 +1,9 @@
 import React,{useState} from 'react'
 import { Link ,useNavigate} from 'react-router-dom';
-import {FaBars, FaRProject, FaUsers} from 'react-icons/fa';
-import {AiFillAlipaySquare, AiOutlineClose, AiFillDatabase, AiFillHome, AiFillPicture, AiFillTags} from 'react-icons/ai';
+import {FaBars, FaUser} from 'react-icons/fa';
+import { AiOutlineClose, AiFillHome, AiFillTags} from 'react-icons/ai';
 import { FaArrowLeft } from "react-icons/fa";
-
+import { Button } from '@/components/ui/button';
 
 function EmpDash() {
     const[open,setOpen]=useState(false);
@@ -18,9 +18,7 @@ const menuItems = [
     { id: 1, title: "Home", path:"/dash" },
     { id: 2, title: "Profile", path: "/dash/profile" },
     { id: 3, title: "Tasks", path: "/dash/task" }
-   
-
-];
+   ];
 
 const navigate=useNavigate();
 const handleBack=()=>{
@@ -45,9 +43,9 @@ const handleBack=()=>{
 
       <div className="flex items-center ">
             <div>
-              <button
+              <Button
             //    onClick={handleLogout}
-                className="bg-red-600 py-1 px-3 mx-2 text-white rounded-full">Logout</button>
+                className="bg-red-600 py-1 px-3 mx-2 text-white rounded-full">Logout</Button>
              </div>         
         </div>
     </div>
@@ -56,7 +54,7 @@ const handleBack=()=>{
 
 <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-72 duration-300 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 ${
+        className={`fixed top-0 left-0 z-40 w-60 duration-300 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 ${
           open ? 'translate-x-0' : '-translate-x-full'
         } sm:translate-x-0`}
         aria-label="Sidebar"
@@ -71,32 +69,11 @@ const handleBack=()=>{
    <div className="h-full px-4  text-xl font-semibold md:py-2 py-4 overflow-y-auto bg-white ">
 <FaArrowLeft className='cursor-pointer' onClick={handleBack} size={25}/>
    <ul className='md:py-4 md:mt-2 px-7 py-0'>
-    {/* <li
-    className="flex items-center p-2 text-gray-900 rounded-lg "
-    >
-      <span className='flex items-center '> */}
-{/* <img src="" alt='image' className='w-12 h-10 rounded-full'/> */}
-{/* <h1 className='font-bold text-[22px] font-sans text-blue-900'>LK Softwares</h1>
-</span>
-      </li> */}
     <li>
     <center>
     <li>
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4OIreKFvX4sGmLSIrea6TPOziJjz6FwSRqw&usqp=CAU" alt="not working" className='h-[150px] w-[150px] mt-0 rounded-full align-center'/>
                 </li>
-            {/* <label htmlFor='fileInput'>
-              <input
-                type='file'
-                id='fileInput'
-                style={{ display: 'none' }}
-                onChange={handleImageChange}
-              />
-              <img
-                src={`${url}images/${selectedImage}` || `http://192.168.1.62:1010/images/ss.png`}
-                alt='preview ' 
-                className={`h-[150px] w-[150px]  rounded-full cursor-pointer`}
-              />
-            </label> */}
           </center>
 
     </li>
@@ -105,16 +82,9 @@ const handleBack=()=>{
                             <li className='py-1' key={menuItem.id}>
                                 <Link to={menuItem.path} className="flex items-center py-2 px-3 text-gray-900 rounded-lg hover:bg-gray-100">
                                     
-                                    {menuItem.id === 1  && <AiFillHome size={25}/>}
-                                    
-                                    {menuItem.id === 2  && <FaUsers size={25}/>}
-                                    {menuItem.id === 3  && <AiFillDatabase size={25}/>}
-                                    {menuItem.id === 4  && <AiFillAlipaySquare size={25}/>}
-                                    {menuItem.id === 5  && <AiFillTags size={25}/>}
-                                    {menuItem.id === 6  && <FaRProject size={25}/>}
-
-
-             
+                                    {menuItem.id === 1  && <AiFillHome size={25}/>} 
+                                    {menuItem.id === 2  && <FaUser size={25}/>}
+                                    {menuItem.id === 3  && <AiFillTags size={25}/>}
                                     <span className="ms-3">{menuItem.title}</span>
                                     
                                 </Link>
@@ -126,38 +96,6 @@ const handleBack=()=>{
     
    </div>
 </aside>
-
-{/* <aside id="logo-sidebar" className={` ${open ? 'translate-x-0' : '-translate-x-full'} fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 aria-label=Sidebar`}>
-                <div className="h-full px-4  overflow-y-auto bg-white ">
-                    <ul className="space-y-1 px-3 font-semibold text-[18px]">
-
-      <h1>Lk Softwares</h1>
-                    <center>
-                        <li>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4OIreKFvX4sGmLSIrea6TPOziJjz6FwSRqw&usqp=CAU" alt="not working" className='h-[150px] w-[150px] mt-0 rounded-full align-center'/>
-                        </li>
-                        </center> 
-                        {menuItems.map((menuItem) => (
-                            <li key={menuItem.id}>
-                                <Link href={menuItem.link} className="flex items-center p-2 px-4 text-gray-900 rounded-lg hover:bg-gray-100">
-                                    
-                                    {menuItem.id === 1  && <AiFillHome size={25}/>}
-                                    {menuItem.id === 2  && <FaUsers size={25}/>}
-                                    {menuItem.id === 3  && <AiFillDatabase size={25}/>}
-                                    {menuItem.id === 4  && <AiFillAlipaySquare size={25}/>}
-                                    {menuItem.id === 5  && <AiFillTags size={25}/>}
-                                    {menuItem.id === 6  && <FaRProject size={25}/>}
-
-
-             
-                                    <span className="ms-3">{menuItem.title}</span>
-                                </Link>
-                            </li>
-                            
-                        ))}
-                    </ul>
-                </div>
-            </aside> */}
     </div>
   )
 }
