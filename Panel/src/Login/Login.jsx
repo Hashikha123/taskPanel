@@ -88,7 +88,7 @@ function Login() {
 
 <div className="mb-4">
   <label className="block text-lg font-semibold mb-1">Role:</label>
-  <select value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)} className="InputArea w-full">
+  <select value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)} className="InputArea border border-blue-500 rounded-2xl w-full">
     {role.map((roles, RoleId) => (
       <option key={RoleId} value={roles.RoleName}>
         {roles.RoleName}
@@ -99,7 +99,7 @@ function Login() {
 
 <div className="mb-4">
   <label htmlFor="username" className=" text-lg font-semibold mb-1">Username:</label>
-  <Input type="text" name="emailOrUsername" id="username" className="InputArea"{...register('emailOrUsername', {
+  <Input type="text" name="emailOrUsername" id="username" className="InputArea rounded-full "{...register('emailOrUsername', {
       required: 'Field is Required',
     })}
     autoComplete="off"
@@ -111,7 +111,7 @@ function Login() {
 
 <div className="mb-4">
   <label htmlFor="password" className="block text-lg font-semibold mb-1">Password:</label>
-  <Input type="password" name="password" id="password" className="InputArea"{...register('password', {required: 'password is required',
+  <Input type="password" name="password" id="password" className="InputArea rounded-full"{...register('password', {required: 'password is required',
     })}
     autoComplete="off"
   />

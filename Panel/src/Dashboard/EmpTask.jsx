@@ -25,10 +25,10 @@ function EmpTask() {
                   <p className='text-[16px] font-semibold mx-1'>{task.name}</p>
                 </div>
                 <div className='flex justify-end items-end gap-x-3'>
-                  <Button className='bg-blue-400 p-2 shadow-md shadow-gray-700'>View</Button>
+                  <Button className='bg-blue-700 p-2 shadow-md shadow-gray-700'>View</Button>
                 </div>
                 <div className='flex justify-end items-end '>
-                  <Button className='bg-orange-300 p-1 shadow-md shadow-gray-500'>On going</Button>
+                  <Button className='bg-orange-500 p-1 shadow-md shadow-gray-500'>On going</Button>
                 </div>
               </CardContent>
             </Card>

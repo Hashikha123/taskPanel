@@ -1,4 +1,5 @@
 // import AdminDash from "./Dashboard/AdminDash"
+import './App.css'
 import { BrowserRouter,Routes,Route } from "react-router-dom"
 import EmpWeek from "./Dashboard/EmpWeek"
 import AdminLayout from "./Dashboard/AdminLayout"
