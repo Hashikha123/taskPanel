@@ -13,6 +13,7 @@ import EmpLayout from "./Dashboard/EmpLayout"
 import EmpHome from "./Dashboard/EmpHome"
 import EmpProfile from "./Dashboard/EmpProfile"
 import EmpTask from "./Dashboard/EmpTask"
+import AddTask from './Dashboard/AddTask'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
   <Route path="/admin/dep" element={<Department/>}/>
   <Route path="/admin/des" element={<Designation/>}/>
   <Route path="/admin/task" element={<Task/>}/>
+  <Route path='/admin/AddTask' element={<AddTask/>} />
   </Route>
     </Routes>
     </BrowserRouter> 

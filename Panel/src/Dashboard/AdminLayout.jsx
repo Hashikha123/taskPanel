@@ -9,7 +9,7 @@ function AdminLayout() {
 <div>
     <AdminDash/>
 </div>
-<div className='flex-1 md:ml-72 bg-gray-100 pt-14'>
+<div className='flex-1 md:ml-[270px] bg-gray-100 pt-14'>
     <Outlet/>
 </div>
     </div>

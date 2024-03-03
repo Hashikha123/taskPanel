@@ -86,9 +86,9 @@ function Login() {
               <form onSubmit={handleSubmit(login)} className="w-full max-w-sm">
               <h1 className="text-3xl text-center text-blue-500 font-bold mb-8">Login</h1>
 
-<div className="mb-4">
+<div className="mb-2">
   <label className="block text-lg font-semibold mb-1">Role:</label>
-  <select value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)} className="InputArea border border-blue-500 rounded-2xl w-full">
+  <select value={selectedRole} onChange={(e) => setSelectedRole(e.target.value)} className="InputArea border border-indigo-500 rounded-2xl w-full">
     {role.map((roles, RoleId) => (
       <option key={RoleId} value={roles.RoleName}>
         {roles.RoleName}
@@ -97,9 +97,9 @@ function Login() {
   </select>
 </div>
 
-<div className="mb-4">
+<div className="mb-2">
   <label htmlFor="username" className=" text-lg font-semibold mb-1">Username:</label>
-  <Input type="text" name="emailOrUsername" id="username" className="InputArea rounded-full "{...register('emailOrUsername', {
+  <Input type="text" name="emailOrUsername" id="username" className="InputArea rounded-2xl "{...register('emailOrUsername', {
       required: 'Field is Required',
     })}
     autoComplete="off"
@@ -109,9 +109,9 @@ function Login() {
   )}
 </div>
 
-<div className="mb-4">
+<div className="mb-3">
   <label htmlFor="password" className="block text-lg font-semibold mb-1">Password:</label>
-  <Input type="password" name="password" id="password" className="InputArea rounded-full"{...register('password', {required: 'password is required',
+  <Input type="password" name="password" id="password" className="InputArea rounded-2xl"{...register('password', {required: 'password is required',
     })}
     autoComplete="off"
   />
@@ -120,7 +120,7 @@ function Login() {
   )}
 </div>
 
-<div className="mb-4">
+<div className="mb-2">
   <Button type="submit" className={`w-full rounded-full text-white text-md bg-blue-600 ${
       loading ? 'opacity-50 pointer-events-none' : ''
     }`}

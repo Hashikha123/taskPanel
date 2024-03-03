@@ -4,6 +4,7 @@ import {
     CardContent,
     CardTitle,
   } from "@/components/ui/card"
+  import { Link } from 'react-router-dom';
   
   import { MdBookmarkAdded } from "react-icons/md";
   import { IoStorefrontSharp } from "react-icons/io5";
@@ -40,31 +41,30 @@ isOpen={!modal}
 
     <div>
       <Card className="bg-green-400">
-        <CardTitle className="text-center mt-3">Total Tasks</CardTitle>
-        <CardContent className="flex justify-center items-center mt-2 gap-x-4"> <MdBookmarkAdded size={25}/><h1>20</h1> </CardContent>
+        <CardTitle className="flex justify-center mt-3">Total Tasks</CardTitle>
+        <CardContent className="flex justify-center items-center mt-3 gap-x-4"> <MdBookmarkAdded size={25}/><h1>20</h1> </CardContent>
       </Card>
       </div>
 
     <div>
       <Card className="bg-yellow-400">
-        <CardTitle className="text-center mt-3">FrontEnd</CardTitle>
-        <CardContent className="flex justify-center items-center mt-2 gap-x-4"> <IoStorefrontSharp size={25}/><h1>12</h1> </CardContent>
+        <CardTitle className="flex justify-center mt-3">FrontEnd</CardTitle>
+        <CardContent className="flex justify-center items-center mt-3 gap-x-4"> <IoStorefrontSharp size={25}/><h1>12</h1> </CardContent>
       </Card>
       </div>
       <div>
       <Card className="bg-red-400">
-        <CardTitle className="text-center mt-3">Backend</CardTitle>
-        <CardContent className="flex justify-center items-center mt-2 gap-x-4"> <FaFileCode size={25}/><h1>12</h1> </CardContent>
+        <CardTitle className="flex justify-center mt-3">Backend</CardTitle>
+        <CardContent className="flex justify-center items-center mt-3 gap-x-4"> <FaFileCode size={25}/><h1>12</h1> </CardContent>
       </Card>
       </div> 
       <div>
-       
+      <Link to = "/admin/AddTask">
       <Card className="bg-blue-400 cursor-pointer" onClick={()=>setModal(true)}>
-        <CardTitle className="text-center mt-3">Add</CardTitle>
-        <CardContent className="flex justify-center items-center mt-2 "> <IoIosPersonAdd size={25}/> </CardContent>
-      </Card>
-      
-      </div> 
+        <CardTitle className=" flex justify-center mt-3">Add</CardTitle>
+        <CardContent className="flex justify-center items-center mt-3 "> <IoIosPersonAdd size={25}/> </CardContent>
+      </Card></Link>
+  </div> 
      
       </div>
     </div>

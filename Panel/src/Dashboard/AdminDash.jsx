@@ -3,7 +3,7 @@ import { Link ,useNavigate} from 'react-router-dom';
 import {FaBars, FaRProject, FaUsers} from 'react-icons/fa';
 import {AiFillAlipaySquare, AiOutlineClose, AiFillDatabase, AiFillHome, AiFillPicture, AiFillTags} from 'react-icons/ai';
 import { FaArrowLeft } from "react-icons/fa";
-
+import { Button } from '@/components/ui/button';
 
 function AdminDash() {
     const[open,setOpen]=useState(false);
@@ -47,9 +47,9 @@ const handleBack=()=>{
 
       <div className="flex items-center ">
             <div>
-              <button
+              <Button
             //    onClick={handleLogout}
-                className="bg-red-600 py-1 px-3 mx-2 text-white rounded-full">Logout</button>
+                className="bg-red-600 py-1 px-3 mx-2 text-white rounded-full">Logout</Button>
              </div>         
         </div>
     </div>
@@ -58,7 +58,7 @@ const handleBack=()=>{
 
 <aside
         id="default-sidebar"
-        className={`fixed top-0 left-0 z-40 w-72 duration-300 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 ${
+        className={`fixed top-0 left-0 z-40 w-[270px] duration-300 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700 ${
           open ? 'translate-x-0' : '-translate-x-full'
         } sm:translate-x-0`}
         aria-label="Sidebar"
@@ -105,15 +105,15 @@ const handleBack=()=>{
     <div className='mt-3'>
     {menuItems.map((menuItem) => (
                             <li className='py-1' key={menuItem.id}>
-                                <Link to={menuItem.path} className="flex items-center py-2 px-3 text-gray-900 rounded-lg hover:bg-gray-100">
+                                <Link to={menuItem.path} className="flex items-center py-2 px-2 text-gray-900 rounded-lg hover:bg-gray-100">
                                     
-                                    {menuItem.id === 1  && <AiFillHome size={25}/>}
+                                    {menuItem.id === 1  && <AiFillHome size={30}/>}
                                     
-                                    {menuItem.id === 2  && <FaUsers size={25}/>}
-                                    {menuItem.id === 3  && <AiFillDatabase size={25}/>}
-                                    {menuItem.id === 4  && <AiFillAlipaySquare size={25}/>}
-                                    {menuItem.id === 5  && <AiFillTags size={25}/>}
-                                    {menuItem.id === 6  && <FaRProject size={25}/>}
+                                    {menuItem.id === 2  && <FaUsers size={30}/>}
+                                    {menuItem.id === 3  && <AiFillDatabase size={30}/>}
+                                    {menuItem.id === 4  && <AiFillAlipaySquare size={30}/>}
+                                    {menuItem.id === 5  && <AiFillTags size={30}/>}
+                                    {menuItem.id === 6  && <FaRProject size={30}/>}
 
 
              
