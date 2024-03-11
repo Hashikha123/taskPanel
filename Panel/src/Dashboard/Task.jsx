@@ -49,10 +49,12 @@ isOpen={!modal}
       </div>
 
     <div>
+    <Link to = "/admin/FTask">
       <Card className="bg-yellow-400">
         <CardTitle className="flex justify-center mt-3">FrontEnd</CardTitle>
         <CardContent className="flex justify-center items-center mt-3 gap-x-4"> <IoStorefrontSharp size={25}/><h1>12</h1> </CardContent>
       </Card>
+      </Link>
       </div>
       <div>
       <Card className="bg-red-400">

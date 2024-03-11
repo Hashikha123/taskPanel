@@ -15,6 +15,7 @@ import EmpProfile from "./Dashboard/EmpProfile"
 import EmpTask from "./Dashboard/EmpTask"
 import AddTask from './Dashboard/AddTask'
 import TotalTask from './Dashboard/TotalTask'
+import FTask from './Dashboard/FTask'
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
   <Route path="/admin/task" element={<Task/>}/>
   <Route path='/admin/AddTask' element={<AddTask/>} />
   <Route path='/admin/TotalTask' element={<TotalTask/>} />
+  <Route path='/admin/FTask' element={<FTask/>} />
   </Route>
     </Routes>
     </BrowserRouter> 
