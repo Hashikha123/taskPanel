@@ -40,10 +40,12 @@ isOpen={!modal}
    <div className='grid grid-cols-1 md:grid-cols-4 m-4 gap-x-4 gap-y-4'>
 
     <div>
+    <Link to = "/admin/TotalTask">
       <Card className="bg-green-400">
         <CardTitle className="flex justify-center mt-3">Total Tasks</CardTitle>
         <CardContent className="flex justify-center items-center mt-3 gap-x-4"> <MdBookmarkAdded size={25}/><h1>20</h1> </CardContent>
       </Card>
+      </Link>
       </div>
 
     <div>
